@@ -1,32 +1,21 @@
-# React + TypeScript + Vite
+# OctoFit Tracker 프런트엔드
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React 19 및 Vite로 만든 프레젠테이션 계층입니다. 개발 서버는 포트 `5173`에서 실행됩니다.
 
-Currently, two official plugins are available:
+## API 기본 URL 설정
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Codespaces에서는 `octofit-tracker/frontend/.env.local` 파일을 만들고 Codespace 이름을 설정하세요.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```env
+VITE_CODESPACE_NAME=your-codespace-name
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Vite는 `VITE_` 접두사가 있는 변수를 클라이언트 앱에 제공합니다. 이름을 설정하면 프런트엔드는 `https://<VITE_CODESPACE_NAME>-8000.app.github.dev/api`를 사용합니다. 변수가 없으면 로컬 개발용 `http://localhost:8000/api`로 대체됩니다.
+
+## 실행
+
+리포지토리 루트에서 다음 명령을 실행하세요.
+
+```bash
+npm run dev --prefix octofit-tracker/frontend
+```
