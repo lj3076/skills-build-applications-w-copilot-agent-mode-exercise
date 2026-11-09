@@ -18,3 +18,4 @@ workoutSchema.index({ title: 1, fitnessLevel: 1 }, { unique: true })
 const Workout = mongoose.models.Workout ?? mongoose.model('Workout', workoutSchema)
 
 export default Workout
+ 

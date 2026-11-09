@@ -8,3 +8,4 @@ export const activityTypes = [
 ] as const
 
 export const fitnessLevels = ['beginner', 'intermediate', 'advanced'] as const
+ 

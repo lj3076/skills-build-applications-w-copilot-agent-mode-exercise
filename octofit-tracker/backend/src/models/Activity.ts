@@ -16,3 +16,4 @@ const activitySchema = new Schema(
 const Activity = mongoose.models.Activity ?? mongoose.model('Activity', activitySchema)
 
 export default Activity
+ 

@@ -19,3 +19,4 @@ leaderboardSchema.index(
 const Leaderboard = mongoose.models.Leaderboard ?? mongoose.model('Leaderboard', leaderboardSchema)
 
 export default Leaderboard
+ 

@@ -8,3 +8,4 @@ export async function connectDatabase() {
   await mongoose.connect(connectionString);
   console.log('Connected to octofit_db');
 }
+ 
